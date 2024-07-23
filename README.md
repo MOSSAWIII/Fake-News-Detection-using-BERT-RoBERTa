@@ -94,6 +94,7 @@ Running Validation...
 After training and evaluating the BERT model, we obtained the following results:
 
 \`\`\`
+
 Testing Bert:
 Predicting labels for 1283 test sentences...
     DONE.
@@ -106,6 +107,7 @@ Predicting labels for 1283 test sentences...
 weighted avg       1.00      1.00      1.00      1283
 
 [[1283]]
+
 \`\`\`
 
 ### RoBERTa
@@ -113,6 +115,7 @@ weighted avg       1.00      1.00      1.00      1283
 After training and evaluating the RoBERTa model, we obtained the following results:
 
 \`\`\`
+
 Testing Roberta:
 Predicting labels for 1283 test sentences...
     DONE.
@@ -125,11 +128,13 @@ Predicting labels for 1283 test sentences...
 weighted avg       1.00      1.00      1.00      1283
 
 [[1283]]
+
 \`\`\`
 
 ## Project Structure
 
 \`\`\`
+
 project/
 ├── data/
 │   └── liar_dataset.py
@@ -147,6 +152,7 @@ project/
 │   └── (empty for now)
 ├── README.md
 └── requirements.txt
+
 \`\`\`
 
 ## Configuration
@@ -156,6 +162,7 @@ Edit the \`config/config.py\` file to set the training parameters, model types, 
 ### Example Configuration (\`config/config.py\`)
 
 \`\`\`python
+
 config = {
     "epochs": 2,
     "batch_size": 16,
@@ -164,6 +171,7 @@ config = {
     "log_dir": "/content/drive/My Drive/logs",
     "model_save_dir": "/content/drive/My Drive/saved_models"
 }
+
 \`\`\`
 
 ## Acknowledgements
