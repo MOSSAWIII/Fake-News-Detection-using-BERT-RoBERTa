@@ -1,3 +1,7 @@
+> **Evaluation correction (October 2026):** The previously reported 100% metrics are not trustworthy. The `LIARDataset` label mapping compares the dataset's numeric IDs to string values, potentially collapsing all samples to class 0. The reported single-class confusion matrix is consistent with this problem. **Do not use the published figures as evidence of predictive performance until the label mapping and holdout evaluation are corrected.** No corrected performance numbers have yet been established.
+
+---
+
 
 **Credits**: This project was created by Mohamed Amine EL MOUSSAOUI.
 
@@ -87,49 +91,11 @@ Running Validation...
   Evaluation took: 0:00:20
 \`\`\`
 
-## Results
+## Results — not yet validated
 
-### BERT
+The previously published test output showed a single predicted/reference class with perfect scores. **Those metrics are invalid as model-quality evidence** and have been withdrawn from this README. See the correction notice at the top.
 
-After training and evaluating the BERT model, we obtained the following results:
-
-\`\`\`
-
-Testing Bert:
-Predicting labels for 1283 test sentences...
-    DONE.
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00      1283
-
-    accuracy                           1.00      1283
-   macro avg       1.00      1.00      1.00      1283
-weighted avg       1.00      1.00      1.00      1283
-
-[[1283]]
-
-\`\`\`
-
-### RoBERTa
-
-After training and evaluating the RoBERTa model, we obtained the following results:
-
-\`\`\`
-
-Testing Roberta:
-Predicting labels for 1283 test sentences...
-    DONE.
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00      1283
-
-    accuracy                           1.00      1283
-   macro avg       1.00      1.00      1.00      1283
-weighted avg       1.00      1.00      1.00      1283
-
-[[1283]]
-
-\`\`\`
+The implementation still needs an explicit mapping of the LIAR dataset's integer labels, checks of class distributions at every split, and a complete reevaluation against majority-class and other baselines. No corrected BERT or RoBERTa accuracy, macro-F1, or per-class metrics are currently asserted.
 
 ## Project Structure
 
