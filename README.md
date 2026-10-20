@@ -1,3 +1,7 @@
+> **Evaluation correction (October 2026):** The previously reported 100% metrics are not trustworthy. The `LIARDataset` label mapping compares the dataset's numeric IDs to string values, potentially collapsing all samples to class 0. The reported single-class confusion matrix is consistent with this problem. **Do not use the published figures as evidence of predictive performance until the label mapping and holdout evaluation are corrected.** No corrected performance numbers have yet been established.
+
+---
+
 
 **Credits**: This project was created by Mohamed Amine EL MOUSSAOUI.
 
